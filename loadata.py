@@ -1,6 +1,6 @@
 
 # options{'params':{'plist': [], 'pcurent': {}, 'pdefault': {}}, 'fields': {}, 'relations': {}}
-# Загружаем данные из вншнего API
+# Загружаем данные из внешнего API
 def load_data_from(url, options):
     
         import requests
