@@ -83,9 +83,6 @@ class BudgetQS(models.QuerySet):
                 elif parent == brl_elem['fields']['code']:
                     parent = self.get(code=brl_elem['fields']['code'])
                     self.filter(code=brl_elem['fields']['code']).update(parentcode=parent)
-            # else:
-                # parent = self.get(code=budget_response_dict['code'])
-                # self.filter(code=budget_response_dict['code']).update(parentcode=parent)
         print("Связи внутри таблицы обновлены")
 
     # Поиск предка по его коду со всеми его корнями
@@ -192,8 +189,8 @@ class PPO_Budget(models.Model):
     # year                = models.DateField("Год")
 
     class Meta:
-        verbose_name = 'Публично-правовые образования' #'Справочник главы по бюджетной классификации' # Публично-правовые образования 
-        verbose_name_plural = 'Справочник ППО по бюджетной классификации'
+        verbose_name = 'Публично-правовые образования' #'Справочник главы по бюджетной классификации' 
+        verbose_name_plural = 'Справочник ППО по бюджетной классификации'   #'Справочники главы по бюджетной классификации' 
 
     objects = PPO_Manager()
 
